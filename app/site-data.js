@@ -2,18 +2,21 @@
 
 const whatWeDoData = [
     {
+        id: 1,
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",
         color: "bg-blue-100"
     },
     {
+        id: 2,
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",
         color: "bg-blue-100"
     },
-    {
+    {   
+        id: 3,
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",

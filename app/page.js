@@ -52,7 +52,7 @@ export default function Home() {
 
           <div className="flex gap-4" >
             {whatWeDoData.map((item) => (
-            <div key={item.color} className="flex flex-col px-[48px] py-[86px] bg-green-200" >
+            <div key={item.id} className="flex flex-col px-[48px] py-[86px] bg-green-200" >
               <h3 className="text-[24px] font-bold mb-4" >End to End Delivery</h3>
               <p className="text-[16px] text-zinc-600 font-medium  " >Full-cycle project execution from concept to launch</p>
               <span className="flex w-[271px] h-[481px] mt-8 bg-[url(/dexwin_assets/about-us.png)] bg-cover" ></span>
