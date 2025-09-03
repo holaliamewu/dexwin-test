@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer className="p-4 bg-gray-800 text-white mt-4">
         <div className=" " >dexwin</div>
-        <p className="" >We are on a mission to become Europe's 
+        <p className="" >We are on a mission to become Europe&apos;s 
         go-to partner for hgih quality IT and talent outsourcing 
         from Africa.
         </p>
-        <h4 className="" >Let's build your innovation together</h4>
+        <h4 className="" >Let&apos;s build your innovation together</h4>
         <nav className="" >
             <span className="" >
                 <li className="" >About</li>

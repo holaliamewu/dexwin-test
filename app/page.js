@@ -62,7 +62,7 @@ export default function Home() {
         </section>
         <section className="flex flex-col w-full  text-white bg-[#001f37] px-[100px] py-[80px] " >
           <span className="px-6 py-4 md:px-20 md:py-20 lg:px-[100px]" >
-            <h2 className="text-5xl font-bold text-center mx-auto" >We've worked with <br />amazing brands</h2>  
+            <h2 className="text-5xl font-bold text-center mx-auto" >We&apos;ve worked with <br />amazing brands</h2>  
             <div className="flex " >
               {
                 brandsWorkedWithData.map((brand) => (
