@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <img src="/dexwin_assets/footer-img.png" className="hidden md:block w-1/2 object-cover object-center" />
       </section>
-      <main className="flex flex-col bg-black text-white ">
+      <main className="flex flex-col bg-black text-white -py-1">
         <section className="flex flex-col md:flex-row justify-between gap-4 px-8 md:px-25 py-20 " >
           <span className="max-w-[300px] mb-4" >
             <Link href="/" className="" >

@@ -192,7 +192,7 @@ function handlePrev() {
         <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
           <div className="flex items-end  gap-4 w-fit mb-[64px]  " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
-              <h2 className="text-[36px] font-bold " >PARTNERSHIPS</h2>
+              <h2 className="text-3xl md:text-[36px] font-bold " >PARTNERSHIPS</h2>
             </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8" >
             {
