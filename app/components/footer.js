@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="flex flex-col ">
       <section className="flex flex-col md:flex-row  min-h-[500px] " >
         <div className="flex flex-col md:w-1/2 p-16 md:py-20 bg-[url('/dexwin_assets/unlock-digital-potential.png')] bg-cover bg-center" >
-          <h2 className="text-5xl md:text-[56px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
+          <h2 className="text-4xl md:text-[56px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
             Unlock your digital potential with our tailored solutions
           </h2>
         <button 

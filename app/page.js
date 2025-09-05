@@ -49,7 +49,7 @@ function handlePrev() {
           </div>       
       </section>
 
-      <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 md:py-[100px]" >
+      <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 py-6 md:py-[100px]" >
         <span>
           <p 
           className="text-[30px] md:text-[36px] font-bold mb-8" 
@@ -67,19 +67,19 @@ function handlePrev() {
           <img src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] lg:max-w-md max-w-full" />
         </section>
 
-        <section className="bg-white w-[90%] text-black md:py-[100px]" >
-          <div className="flex items-end justify-between mb-[64px] " >
-            <div className="flex items-end gap-4 w-full " >
+        <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
+          <div className="flex flex-col md:flex-row items-end justify-between mb-[64px] " >
+            <div className="flex items-end gap-4 mb-8 w-full " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
-              <h2 className="text-[36px] font-bold " >HOW WE DO IT</h2>
+              <h2 className="text-3xl md:text-[36px] font-bold " >HOW WE DO IT</h2>
             </div>
-            <p className="text-[16px] " >We build and staff digital capabilities across product, design, engineering and data.
+            <p className="text-[16px] ml-4 " >We build and staff digital capabilities across product, design, engineering and data.
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4" >
             {whatWeDoData.map((item) => (
-            <div key={item.id} className="flex flex-col px-[48px] py-[86px] " style={{backgroundColor: `${item.color}`}} >
+            <div key={item.id} className="flex flex-col px-[48px] py-[86px] rounded-lg" style={{backgroundColor: `${item.color}`}} >
               <h3 className="text-[24px] font-bold mb-4" >End to End Delivery</h3>
               <p className="text-[16px] text-zinc-600 font-medium  " >Full-cycle project execution from concept to launch</p>
               <span className="flex w-[271px] h-[481px] mt-8 bg-[url(/dexwin_assets/about-us.png)] bg-cover" style={{ backgroundImage: `${item.imageUrl}`}} ></span>
@@ -95,7 +95,7 @@ function handlePrev() {
                 brandsWorkedWithData.map((brand) => (
                   <span 
                     key={brand.brandName} 
-                    className="w-full md:w-[225px]  h-[107px] md:h-[109px] bg-contain md:bg-cover bg-center bg-no-repeat"
+                    className="w-full md:w-[225px]  h-[107px] md:h-[109px] bg-contain md:bg-cover bg-center bg-no-repeat rounded-lg"
                     style={{ backgroundImage: `url(${brand.logoUrl})`}} ></span>
                 ))
               }
@@ -103,10 +103,10 @@ function handlePrev() {
           </span>
         </section>
 
-        <section className="bg-white w-[90%] text-black md:py-[100px]" >
-          <div className="flex items-end mx-auto gap-4 w-fit mb-[64px] " >
+        <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
+          <div className="flex items-end md:mx-auto gap-4 w-fit mb-[64px] " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
-              <h2 className="text-[36px] font-bold " >CORE SERVICES</h2>
+              <h2 className="text-3xl md:text-[36px] font-bold " >CORE SERVICES</h2>
             </div>
 
           <div className="flex flex-col md:flex-row w-full bg-white gap-8" >
@@ -152,10 +152,10 @@ function handlePrev() {
           </div>
         </section>
 
-        <section className="bg-white w-[90%] text-black md:py-[100px]" >
+        <section className="bg-white w-[90%] text-black py-6 md:px-6 md:py-[100px]" >
           <div className="flex items-end  gap-4 w-fit mb-[64px] " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
-              <h2 className="text-[36px] font-bold " >NOTABLE PROJECTS</h2>
+              <h2 className="text-3xl md:text-[36px] font-bold " >NOTABLE PROJECTS</h2>
             </div>
           <div className="flex flex-col md:flex-row min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
             {
@@ -177,7 +177,7 @@ function handlePrev() {
                     </div>
                   </span>
                   <img src={project.descriptionImageUrl} alt={`${project.projectName} description image`} className="hidden md:block w-[400px] h-[300px] object-cover " />
-                  <span className="flex items-center justify-center absolute top-10 right-10 bg-white rounded-full w-[66px] h-[66px] " ><ArrowUpRight className="text-black text-[24px] " /></span>
+                  <span className="hidden md:flex items-center justify-center absolute top-10 right-10 bg-white rounded-full w-[66px] h-[66px] " ><ArrowUpRight className="text-black text-[24px] " /></span>
                   </div>
               ))}
             </div>
@@ -189,7 +189,7 @@ function handlePrev() {
               <div className="flex flex-1 w-[100vw] bg-gray-100 h-1 rounded-full" ><div className="bg-[#002f54] h-1 rounded-full"  style={{width: progressWidth * 10}}></div></div>
             </div>
           </section>
-        <section className="bg-white w-[90%] text-black md:py-[100px]" >
+        <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
           <div className="flex items-end  gap-4 w-fit mb-[64px]  " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
               <h2 className="text-[36px] font-bold " >PARTNERSHIPS</h2>
@@ -198,9 +198,9 @@ function handlePrev() {
             {
               partnershipsData.map((partner) => (
                 <div key={partner.partnerName} className="flex flex-col justify-between w-full max-w-[764px] bg-[#f6f6f6] gap-4 px-12 py-8 rounded-lg" >
-                  <span className="flex items-start justify-between " >
+                  <span className="flex items-start justify-between gap-4" >
                     <h3 className="text-[30px] font-semibold" >{partner.partnerName}</h3>
-                    <img src={partner.partnerLogoUrl} alt={`${partner.partnerName} logo`} className="" />
+                    <img src={partner.partnerLogoUrl} alt={`${partner.partnerName} logo`} className="w-[100px]" />
                   </span>
                   <p className="text-[16px] text-zinc-500 font-regular" >{partner.description}</p>
                 </div>
