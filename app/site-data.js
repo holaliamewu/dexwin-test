@@ -6,21 +6,21 @@ const whatWeDoData = [
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",
-        color: "bg-blue-100"
+        color: "#f2edfd"
     },
     {
         id: 2,
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",
-        color: "bg-blue-100"
+        color: "#02aa69"
     },
     {   
         id: 3,
         title: "End to End Delivery",
         description: "Full-cycle project execution from concept to launch",
         imageUrl: "/dexwin_assets/end-to-end.png",
-        color: "bg-blue-100"
+        color: "#f2edfd"
     },
 ]
 
@@ -85,7 +85,8 @@ const notableProjectsData = [
     {
         projectName: "MyMTN App",
         projectDescription: "Transitioned MTN Ghana's USSD functionality into a robust mobile app, increasing user convenience and satisfaction.",
-        projectImageUrl: "/dexwin_assets/saving-grains-project.png",
+        projectImageUrl: "/dexwin_assets/mtn-logo.svg",
+        descriptionImageUrl: "/dexwin_assets/mymtn-app.png",
         metricOne: "1M+",
         metricOneDescription: "Active Users",
         metricTwo: "127%+",
@@ -94,7 +95,8 @@ const notableProjectsData = [
     {
         projectName: "Saving Grains",
         projectDescription: "Developed a hybrid solution for rural farmers in partnership with a German enterprise, driving over 500% user growth in Ghana.",
-        projectImageUrl: "/dexwin_assets/saving-grains-project.png",
+        projectImageUrl: "/dexwin_assets/saving-grains-partnership.svg",
+        descriptionImageUrl: "/dexwin_assets/notable-projects-saving-grains.png",
         metricOne: "15k+",
         metricOneDescription: "Farmers Reached",
         metricTwo: "500%",
@@ -103,7 +105,8 @@ const notableProjectsData = [
     {
         projectName: "MTN Pulse",
         projectDescription: "Created a dynamic digital hub for youth engagement, blending entertainment, social media, and brand loyalty.",
-        projectImageUrl: "/dexwin_assets/saving-grains-project.png",
+        projectImageUrl: "/dexwin_assets/mtn-logo.svg",
+        descriptionImageUrl: "/dexwin_assets/notable-projects-mtn-pulse.png",
         metricOne: "500K+",
         metricOneDescription: "Youth Engaged",
         metricTwo: "100K+",
@@ -112,9 +115,10 @@ const notableProjectsData = [
     {
         projectName: "MTN Hoods",
         projectDescription: "Delivered a frictionless top-up experience, allowing customers to recharge in just a few taps.",
-        projectImageUrl: "/dexwin_assets/saving-grains-project.png",
+        projectImageUrl: "/dexwin_assets/mtn-logo.svg",
+        descriptionImageUrl: "/dexwin_assets/notable-projects-mtn-hoods.png",
         metricOne: "1K+",
-        metricOneDescription: "Transactions/Day",
+        metricOneDescription: "Transactions /Day",
         metricTwo: "3 Taps",
         metricTwoDescription: "Avg. Completion",
     },
@@ -135,7 +139,7 @@ const partnershipsData = [
     {
         partnerName: "The World Bank",
         description: "An international institution that funds and advises global development initiatives.",
-        partnerLogoUrl: "/dexwin_assets/the-world-bank-partnership.svg",
+        partnerLogoUrl: "/dexwin_assets/world-bank-partnership.svg",
     },
     {
         partnerName: "Saving Grains",

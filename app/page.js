@@ -1,10 +1,25 @@
+'use client';
+
+import { useState } from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "@fontsource/maven-pro"; 
 import { brandsWorkedWithData, notableProjectsData, partnershipsData, whatWeDoData } from "./site-data";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function Home() {
+
+  const [progressWidth, setProgressWidth] = useState(1);
+
+  function handleNext() {
+  setProgressWidth(prev => (prev < 10 ? prev + 1 : prev));
+}
+
+function handlePrev() {
+  setProgressWidth(prev => (prev > 2 ? prev - 1 : prev));
+}
+
+
   return (
     <div className="font-[Maven_Pro]" >
       <main 
@@ -17,7 +32,7 @@ export default function Home() {
         >Empowering <br />Global Innovation Through <br/><span className="text-[#09a768] " >African Excellence</span>
         </h1>
         <p 
-        className="text-[20px] md:text-[24px] md:w-5/10 mb-8 md:mb-[72px] text-center mx-auto " >We provide talent to leading firms looking to expand their product teams
+        className="text-[20px] w-9/10 md:text-[24px] md:w-5/10 mb-8 md:mb-[72px] text-center mx-auto " >We provide talent to leading firms looking to expand their product teams
         </p>
         <button 
         className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 r mx-auto bg-[#09a768] rounded-full " 
@@ -26,19 +41,23 @@ export default function Home() {
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
-        </button>        
-        <p className="text-[16px] font-black text-center mb-12" >TRUSTED BY AMAZING BRANDS</p>
+        </button> 
+        <div className="flex items-center justify-center max-w-9/10 mx-auto gap-4 mb-12" >
+          <span className="h-[1px] w-[64px] bg-white" ></span>
+          <p className="text-[16px] font-black text-center" >TRUSTED BY AMAZING BRANDS</p>
+          <span className="h-[1px] w-[64px] bg-white" ></span>
+          </div>       
       </section>
 
       <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 md:py-[100px]" >
         <span>
           <p 
-          className="text-[30px] md:text-[36px] font-bold md:mb-8" 
+          className="text-[30px] md:text-[36px] font-bold mb-8" 
           >Dexwin is an end-to-end digital product development agency 
           with a focus on delivering usable products that solve problems.
           </p>
           <span className="flex flex-col md:flex-row " >
-            <span className="inline-block text-[14px] font-medium min-w-fit max-h-fit px-4 py-2 border border-black rounded-full   " >Who We Are?</span>
+            <span className="inline-block text-[14px] font-medium w-fit md:min-w-fit max-h-fit px-4 py-2 mb-4 border border-black rounded-full   " >Who We Are?</span>
             <p className="text-gray-700 leading-relaxed text-lg md:ml-[40px]" >We specialize in product design, data analysis, software development, 
               digital advertising and general services. We provide talent to leading firms looking
               to expand their product teams 
@@ -58,12 +77,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex gap-4" >
+          <div className="flex flex-col md:flex-row gap-4" >
             {whatWeDoData.map((item) => (
-            <div key={item.id} className="flex flex-col px-[48px] py-[86px] bg-green-200" >
+            <div key={item.id} className="flex flex-col px-[48px] py-[86px] " style={{backgroundColor: `${item.color}`}} >
               <h3 className="text-[24px] font-bold mb-4" >End to End Delivery</h3>
               <p className="text-[16px] text-zinc-600 font-medium  " >Full-cycle project execution from concept to launch</p>
-              <span className="flex w-[271px] h-[481px] mt-8 bg-[url(/dexwin_assets/about-us.png)] bg-cover" ></span>
+              <span className="flex w-[271px] h-[481px] mt-8 bg-[url(/dexwin_assets/about-us.png)] bg-cover" style={{ backgroundImage: `${item.imageUrl}`}} ></span>
             </div>
             ))}
           </div>
@@ -90,44 +109,44 @@ export default function Home() {
               <h2 className="text-[36px] font-bold " >CORE SERVICES</h2>
             </div>
 
-          <div className="flex w-full bg-white gap-8" >
+          <div className="flex flex-col md:flex-row w-full bg-white gap-8" >
             <span className="flex flex-col gap-8" >
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
                 <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
                 <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
                 <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
               </div>
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
-                <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
-                <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
-                <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
+                <img src="/dexwin_assets/software-development.svg" alt="Product Design Icon" className="mb-[30px]" />
+                <h3 className="text-[24px] font-semibold mb-2" >Software Development</h3>
+                <p className="text-[16px] text-zinc-500 " >Scalable web and mobile app solutions using modern frameworks</p>
               </div>
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
-                <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
-                <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
-                <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
+                <img src="/dexwin_assets/data-analytics.svg" alt="Product Design Icon" className="mb-[30px]" />
+                <h3 className="text-[24px] font-semibold mb-2" >Data Analytics</h3>
+                <p className="text-[16px] text-zinc-500 " >Actionable insights from raw data to guide decisions</p>
               </div>
             </span>
 
-            <span className="flex-1" >
-                <img src="/dexwin_assets/about-us.png" alt="Product Design Icon" className="h-[1000px] object-cover object-left rounded-lg mb-[30px]" />
+            <span className="hidden md:flex-1" >
+                <img src="/dexwin_assets/about-us.png" alt="Product Design Icon" className="flex-1 min-w-[500px] w-full h-[1000px] object-cover object-left rounded-lg mb-[30px]" />
             </span>
 
             <span className="flex flex-col gap-8" >
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
-                <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
-                <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
-                <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
+                <img src="/dexwin_assets/skills-training2.svg" alt="Skills training Icon" className="mb-[30px]" />
+                <h3 className="text-[24px] font-semibold mb-2" >Skills Training</h3>
+                <p className="text-[16px] text-zinc-500 " >Tailored programs to upskill internal teams</p>
               </div>
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
-                <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
-                <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
-                <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
+                <img src="/dexwin_assets/talent-outsourcing.svg" alt="Talent Sourcing Icon" className="mb-[30px]" />
+                <h3 className="text-[24px] font-semibold mb-2" >Talent Sourcing</h3>
+                <p className="text-[16px] text-zinc-500 " >Contract-based or embedded team members across roles and stacks</p>
               </div>
-              <div className="w-[198px] px-6 py-10 rounded-lg bg-green-200" >
-                <img src="/dexwin_assets/product-design.svg" alt="Product Design Icon" className="mb-[30px]" />
-                <h3 className="text-[24px] font-semibold mb-2" >Product Design</h3>
-                <p className="text-[16px] text-zinc-500 " >Intuitive, user-centered interfaces and user experiences</p>
+              <div className="md:max-w-100 px-6 py-10 rounded-lg bg-[#f2edfd]" >
+                <img src="/dexwin_assets/it-consulting.svg" alt="IT Consulting Icon" className="mb-[30px]" />
+                <h3 className="text-[24px] font-semibold mb-2" >IT Consulting</h3>
+                <p className="text-[16px] text-zinc-500 " >We offer a wide range of general services to support your business operations. From consulting to implementation, our experts are here to ensure your success.</p>
               </div>
             </span>
           </div>
@@ -138,29 +157,36 @@ export default function Home() {
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
               <h2 className="text-[36px] font-bold " >NOTABLE PROJECTS</h2>
             </div>
-          <div className="flex min-w-full overflow-x-hidden " >
+          <div className="flex flex-col md:flex-row min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
             {
               notableProjectsData.map((project) => (
-                <div key={project.projectName} className="flex w-full md:w-3/4 max-w-[800px] p-8 rounded-lg bg-[#f6f6f6] relative overflow-x-hidden" >
+                <div key={project.projectName} className="flex w-full md:min-w-3/4 max-w-[800px] p-8 rounded-lg bg-[#f6f6f6] relative overflow-x-hidden" >
                   <span className="flex-1 " >
-                    <img src="/dexwin_assets/mtn-logo.svg" alt="MTN Logo" className="mb-8 w-[100px] " />
-                    <h3 className="text-[36px] font-semibold mb-4" >MyMTN App</h3>
-                    <p className="text-[16px] text-zinc-500" >Transitioned MTN Ghana&apos;s USSD functionality into a robust mobile app, increasing user convenience and satisfaction.</p>
+                    <img src={project.projectImageUrl} alt={`${project.projectName} logo`} className="mb-8 w-[100px] " />
+                    <h3 className="text-[36px] font-semibold mb-4" >{project.projectName}</h3>
+                    <p className="text-[16px] text-zinc-500" >{project.projectDescription}</p>
                     <div className="flex gap-8 mt-12" >
                       <span className="" >
-                        <h4 className="text-[30px] font-semibold" >1M+</h4>
-                        <h6 className="font-regular" >Active <br />Users</h6>
+                        <h4 className="text-[30px] font-semibold" >{project.metricOne}</h4>
+                        <h6 className="font-regular line-clamp-2 w-[90px]" >{project.metricOneDescription}</h6>
                       </span>
                       <span className="" >
-                        <h4 className="text-[30px] font-semibold" >127%</h4>
-                        <h6 className="font-regular" >User <br />Growth</h6>
+                        <h4 className="text-[30px] font-semibold" >{project.metricTwo}</h4>
+                        <h6 className="font-regular line-clamp-2 w-[90px]" >{project.metricTwoDescription}</h6>
                       </span>  
                     </div>
                   </span>
-                  <img src="/dexwin_assets/mymtn-app.png" alt="my mtn app image" className="w-[400px] " />
+                  <img src={project.descriptionImageUrl} alt={`${project.projectName} description image`} className="hidden md:block w-[400px] h-[300px] object-cover " />
                   <span className="flex items-center justify-center absolute top-10 right-10 bg-white rounded-full w-[66px] h-[66px] " ><ArrowUpRight className="text-black text-[24px] " /></span>
                   </div>
               ))}
+            </div>
+            <div className="hidden md:flex w-full items-center gap-4 mt-8" >
+              <span className="flex items-center justify-center gap-2 " > 
+                <button onClick={handlePrev} className="flex items-center justify-center border border-gray-300 rounded-full w-[78px] h-[78px] hover:bg-gray-100 transition " ><ArrowLeft size="24" /></button>  
+                <button onClick={handleNext} className="flex items-center justify-center border border-gray-300 rounded-full w-[78px] h-[78px] hover:bg-gray-100 transition " ><ArrowRight size="24" /></button>  
+              </span>
+              <div className="flex flex-1 w-[100vw] bg-gray-100 h-1 rounded-full" ><div className="bg-[#002f54] h-1 rounded-full"  style={{width: progressWidth * 10}}></div></div>
             </div>
           </section>
         <section className="bg-white w-[90%] text-black md:py-[100px]" >
@@ -171,14 +197,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8" >
             {
               partnershipsData.map((partner) => (
-                <div key={partner.partnerName} className="flex flex-col justify-between w-full max-w-[764px] bg-[#f6f6f6] px-12 py-8 rounded-lg" >
-                  <span className="flex items-center justify-between " >
-                    <h3 className="text-[30px] font-semibold" >MTN Ghana</h3>
-                    <img src="/dexwin_assets/mtn-logo.svg" alt="Contact Us" className="" />
+                <div key={partner.partnerName} className="flex flex-col justify-between w-full max-w-[764px] bg-[#f6f6f6] gap-4 px-12 py-8 rounded-lg" >
+                  <span className="flex items-start justify-between " >
+                    <h3 className="text-[30px] font-semibold" >{partner.partnerName}</h3>
+                    <img src={partner.partnerLogoUrl} alt={`${partner.partnerName} logo`} className="" />
                   </span>
-                  <p className="text-[16px] text-zinc-500 font-regular" >Ready to start your project? Contact us today to discuss your needs and 
-                    discover how we can help bring your ideas to life.
-                  </p>
+                  <p className="text-[16px] text-zinc-500 font-regular" >{partner.description}</p>
                 </div>
               ))}
           </div>

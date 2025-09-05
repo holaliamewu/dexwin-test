@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col ">
       <section className="flex flex-col md:flex-row  min-h-[500px] " >
-        <div className="flex flex-col w-1/2 p-16 md:py-20 bg-[url('/dexwin_assets/unlock-digital-potential.png')] bg-cover bg-center" >
+        <div className="flex flex-col md:w-1/2 p-16 md:py-20 bg-[url('/dexwin_assets/unlock-digital-potential.png')] bg-cover bg-center" >
           <h2 className="text-5xl md:text-[56px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
             Unlock your digital potential with our tailored solutions
           </h2>
@@ -18,11 +18,11 @@ export default function Footer() {
           </span>
         </button>
         </div>
-        <img src="/dexwin_assets/footer-img.png" className="w-1/2 object-cover object-center" />
+        <img src="/dexwin_assets/footer-img.png" className="hidden md:block w-1/2 object-cover object-center" />
       </section>
       <main className="flex flex-col bg-black text-white ">
-        <section className="flex justify-between gap-4 px-25 py-20 " >
-          <span className="max-w-[300px] " >
+        <section className="flex flex-col md:flex-row justify-between gap-4 px-8 md:px-25 py-20 " >
+          <span className="max-w-[300px] mb-4" >
             <Link href="/" className="" >
               <img src="/dexwin_assets/dexwin-logo.svg" />
             </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <h4 className="text-[16px] font-bold" >Let&apos;s build your innovation together</h4>
           </span>
-          <nav className="flex flex-col md:flex-row gap-64" >
+          <nav className="flex flex-col md:flex-row gap-8 md:gap-64" >
               <span className="flex flex-col gap-4" >
                   <Link href="/" className="" >About</Link>
                   <Link href="/" className="" >Services</Link>
@@ -47,7 +47,7 @@ export default function Footer() {
           </nav>
         </section>
 
-        <span className="my-8 py-6 text-center border-t-1 border-t-gray-500" >Copyright &copy; 2025 Dexwin</span>
+        <span className="my-8 py-8 pl-8 md:text-center  border-t-1 border-t-gray-500" >Copyright &copy; 2025 Dexwin</span>
       </main>
     </footer>
   );
