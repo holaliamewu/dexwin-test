@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import "@fontsource/maven-pro"; 
+import Sidebar from "./components/sidebar";
 import { brandsWorkedWithData, notableProjectsData, partnershipsData, whatWeDoData } from "./site-data";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -25,10 +25,11 @@ function handlePrev() {
       <main 
       className="flex flex-col items-center justify-center min-h-screen mx-auto"
       >
+      <Sidebar />
       <section className="w-full md:min-h-[100vh] text-white bg-[url(/gh-background.png)] bg-cover" >
         <Header />
         <h1 
-        className="text-[36px] md:text-[72px] font-[Maven_Pro] font-[700] text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
+        className="text-[36px] md:text-[72px] font-[Maven_Pro] font-semibold text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
         >Empowering <br />Global Innovation Through <br/><span className="text-[#09a768] " >African Excellence</span>
         </h1>
         <p 
@@ -207,6 +208,22 @@ function handlePrev() {
               ))}
           </div>
           </section>
+          <section className="flex flex-col md:flex-row  min-h-[500px] " >
+        <div className="flex flex-col md:w-1/2 p-16 md:py-20 bg-[url('/dexwin_assets/unlock-digital-potential.png')] bg-cover bg-center" >
+          <h2 className="text-4xl md:text-[56px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
+            Unlock your digital potential with our tailored solutions
+          </h2>
+        <button 
+        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        >
+          <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
+          <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
+            <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
+          </span>
+        </button>
+        </div>
+        <img src="/dexwin_assets/footer-img.png" className="hidden md:block w-1/2 object-cover object-center" />
+      </section>
       </main>
       <Footer />
     </div>

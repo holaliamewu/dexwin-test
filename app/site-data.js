@@ -148,4 +148,23 @@ const partnershipsData = [
     },
 ]
 
-export { whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData };
+const sidebarLinksData = [
+    {
+        linkName: "About Us",
+        linkUrl: "/about"
+    },
+    {
+        linkName: "Services",
+        linkUrl: "/services"
+    },
+    {
+        linkName: "Projects",
+        linkUrl: "/projects"
+    },
+    {
+        linkName: "Contact Us",
+        linkUrl: "/contact-us"
+    },
+]
+
+export { whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };
