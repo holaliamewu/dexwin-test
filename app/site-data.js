@@ -91,6 +91,8 @@ const notableProjectsData = [
         metricOneDescription: "Active Users",
         metricTwo: "127%+",
         metricTwoDescription: "User Growth",
+        problem: "MTN Ghana, with the largest subscriber base in the country, realized that their services needed to be digitally transformed from USSDs to mobile apps to conform with global standards. This transformation was necessary because of the increasing importance of providing an improved user experience to increase customer satisfaction, conversion, and business bottom line.",
+        solution: "MTN tasked Dexwin to spearhead this transformation. Dexwin armed themselves with data and set out to create an all-encompassing platform that was robust enough to serve millions of users. The success of the project is evident in the high reviews the app has received so far."
     },
     {
         projectName: "Saving Grains",
@@ -101,6 +103,8 @@ const notableProjectsData = [
         metricOneDescription: "Farmers Reached",
         metricTwo: "500%",
         metricTwoDescription: "Growth Rate",
+        problem: "Saving Grains is a German business that aims to help African rural grain farmers and traders become large-scale professional traders. However, their non-tech savvy users faced difficulty in accessing credit and services due to the complexity of the solutions provided.",
+        solution: "The mission was to develop a hybrid tech and brick and mortar solution that would simplify credit and service delivery for their users.They worked on this solution with the rural aggregator and farmer in mind and managed to scale their business with more than 500% growth in users in Ghana. Currently, they are running a second pilot in Kenya."
     },
     {
         projectName: "MTN Pulse",
@@ -111,6 +115,8 @@ const notableProjectsData = [
         metricOneDescription: "Youth Engaged",
         metricTwo: "100K+",
         metricTwoDescription: "Daily Sessions",
+        problem: "MTN Ghana needed to cater to their youthful customer base to ensure brand longevity and growth.",
+        solution: "MTN wanted to combine the colorful and exciting parts of life with value and affordability to appeal to the younger group. The solution was to build a platform that would offer unparalleled value to this customer segment. The platform was designed with activities associated with the younger generation in mind, such as events, social media, and on-the-go entertainment."
     },
     {
         projectName: "MTN Hoods",
@@ -121,6 +127,8 @@ const notableProjectsData = [
         metricOneDescription: "Transactions /Day",
         metricTwo: "3 Taps",
         metricTwoDescription: "Avg. Completion",
+        problem: "MTN Ghana wanted to create a digital hub for youth engagement, blending entertainment, social media and brand identity",
+        solution: "The project brought together elements of entertainment, social media, and MTN's brand identity to craft an immersive online environment that reflects the energy and creativity of young Ghanaians. From interactive content and music integration to influencer-led campaigns and gamified experiences, the hub was designed to keep users engaged while reinforcing MTN&apos;s position as a brand that supports youth empowerment and digital innovation."
     },
 ]
 
@@ -167,4 +175,28 @@ const sidebarLinksData = [
     },
 ]
 
-export { whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };
+
+const faqsData = [
+    {
+        question: "What industries do you work with?",
+        answer: "We work across various industries, including healthcare, fintech, e-commerce, education, logistics, SaaS, and real estate. Our adaptable team can customize solutions for any niche, bringing deep understanding of industry-specific challenges and user needs to every project."
+    },
+    {
+        question: "Can you work with our existing in-house team?",
+        answer: "Absolutely! We specialize in seamless integration with existing teams. Whether you need to augment your current workforce, provide specialized expertise, or take full project ownership, we adapt our collaboration style to match your team's workflow and communication preferences."
+    },
+    {
+        question: "Do you build custom solutions or use templates?",
+        answer: "We build fully custom solutions tailored to your specific business needs and brand identity. While we leverage proven design patterns and best practices for efficiency, every project is crafted from scratch to ensure it perfectly aligns with your goals and provides a unique user experience."
+    },
+    {
+        question: "How do I get started?",
+        answer: "Getting started is simple! Reach out through our contact form or email us directly. We'll schedule a discovery call to understand your project requirements, timeline, and budget. From there, we'll provide a detailed proposal and project roadmap tailored to your specific needs."
+    },
+    {
+        question: "Where is your team located?",
+        answer: "Our talented team is based in Accra, Ghana, with strategic partnerships across Europe. This allows us to provide cost-effective, high-quality solutions while maintaining excellent communication and collaboration with clients in different time zones and markets."
+    },
+]
+
+export { faqsData, whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };

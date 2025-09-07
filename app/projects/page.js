@@ -34,10 +34,10 @@ export default function ProjectsPage() {
             }
         </div>
     </section>
-    <section className="flex flex-col md:flex-row min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
+    <section className="flex flex-col min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
             {
               notableProjectsData.map((project) => (
-                <div key={project.projectName} className="flex w-full md:min-w-3/4 max-w-[800px] p-8 rounded-lg bg-[#f6f6f6] relative overflow-x-hidden" >
+                <div key={project.projectName} className="flex w-full md:min-w-9/10 max-w-[800px] mx-auto p-8 rounded-lg relative overflow-x-hidden" >
                   <span className="flex-1 " >
                     <img src={project.projectImageUrl} alt={`${project.projectName} logo`} className="mb-8 w-[100px] " />
                     <h3 className="text-[36px] font-semibold mb-4" >{project.projectName}</h3>
@@ -45,16 +45,28 @@ export default function ProjectsPage() {
                     <div className="flex gap-8 mt-12" >
                       <span className="" >
                         <h4 className="text-[30px] font-semibold" >{project.metricOne}</h4>
-                        <h6 className="font-regular line-clamp-2 w-[90px]" >{project.metricOneDescription}</h6>
+                        <h6 className="font-regular " >{project.metricOneDescription}</h6>
                       </span>
+                      <span className="w-[0.5px] bg-gray-400" />
                       <span className="" >
                         <h4 className="text-[30px] font-semibold" >{project.metricTwo}</h4>
-                        <h6 className="font-regular line-clamp-2 w-[90px]" >{project.metricTwoDescription}</h6>
+                        <h6 className="font-regular  " >{project.metricTwoDescription}</h6>
                       </span>  
+                    </div>
+                    <div className="flex justify-between gap-12 mt-[50px] " >
+                      <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Problem</h4>
+                      <p className="text-[18px] text-gray-700 leading-relaxed" >
+                        {project.problem}
+                      </p>
+                    </div>
+                    <div className="flex justify-between gap-12 mt-[50px] " >
+                      <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Solution</h4>
+                      <p className="text-[18px] text-gray-700 leading-relaxed" >
+                        {project.solution}
+                      </p>
                     </div>
                   </span>
                   <img src={project.descriptionImageUrl} alt={`${project.projectName} description image`} className="hidden md:block w-[400px] h-[300px] object-cover " />
-                  <span className="hidden md:flex items-center justify-center absolute top-10 right-10 bg-white rounded-full w-[66px] h-[66px] " ><ArrowUpRight className="text-black text-[24px] " /></span>
                   </div>
               ))}
         </section>
