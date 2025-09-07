@@ -17,7 +17,7 @@ export default function Sidebar({ setOpenMenu  }) {
             <nav className="flex flex-col gap-8 mb-22" >
                 {
                     sidebarLinksData.map(link => (
-                        <Link href={link.linkUrl} className="text-6xl md:text-[80px] font-bold hover:underline underline-offset-2" >{link.linkName}</Link>
+                        <Link key={link.linkName} href={link.linkUrl} className="text-6xl md:text-[80px] font-bold hover:underline underline-offset-2" >{link.linkName}</Link>
                     ))
                 }
             </nav>
