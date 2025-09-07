@@ -1,12 +1,21 @@
+
+'use client'
+
 import Link from "next/link";
 import Footer from "../components/footer";
 import { brandsWorkedWithData, faqsData } from "../site-data";
 import { ChevronUp, Menu } from "lucide-react";
+import { useState } from "react";
+import Sidebar from "../components/sidebar";
 
 
 export default function ContactPage() {
+
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
   <div>
+    {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
     <header 
     className=" flex items-center justify-between w-full px-4 md:px-[5%] pt-4 md:pt-20 lg:pt-[50px] mx-auto pb-8">
         <Link href="/" className="flex gap-4 pt-2" >
@@ -17,7 +26,9 @@ export default function ContactPage() {
             <ChevronUp size="18" />
           </span>
         </Link>
-        <Menu size="32" alt="Menu Icon" className=" text-black"/>
+        <button onClick={() => setOpenMenu(true)} >
+          <Menu size="32" alt="Menu Icon" className=" text-black"/>
+        </button>
     </header>
     <section className="bg-white w-[90%] text-black mx-auto" >
         <h1 className="mt-[96px] max-w-[1000px] mb-4 text-7xl md:text-[80px] font-bold">Contact <span className="text-[#02aa69] " >DEXWIN</span> to build something unforgettable</h1>

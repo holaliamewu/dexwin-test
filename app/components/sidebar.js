@@ -3,15 +3,15 @@ import Link from "next/link";
 import { sidebarLinksData } from "../site-data";
 
 
-export default function Sidebar() {
+export default function Sidebar({ setOpenMenu  }) {
   return (
     <section className="fixed overflow-y-scroll animate-slide-down z-50 top-0 left-0 right-0 bottom-0 flex flex-col gap-8 w-full min-h-full px-20 py-25 bg-[#232323] text-white" >
         <div className="flex items-center justify-between gap-4" >
             <img src="/dexwin_assets/dexwin-logo.svg" className="w-20 md:w-40 h-10"/>
-            <span className="flex items-center gap-4" >
+            <button onClick={() => setOpenMenu(false)} className="flex items-center gap-4" >
                 <h4 className="text-[16px] " >Close</h4>
                 <X size="32" />
-            </span>
+            </button>
         </div>
         <div className="flex items-center justify-between w-full mt-12 md:mt-36" >
             <nav className="flex flex-col gap-8 mb-22" >
