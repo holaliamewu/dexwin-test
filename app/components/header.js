@@ -2,7 +2,7 @@ import { ChevronUp, Menu } from "lucide-react";
 import Link from "next/link";
 
 
-export default function Header() {
+export default function Header({ setOpenMenu }) {
   return (
     <header 
     className=" flex items-center justify-between w-full px-4 md:px-[5%] pt-10 mx-auto pb-8">
@@ -14,7 +14,7 @@ export default function Header() {
             <ChevronUp size="18" />
           </span>
         </Link>
-        <Menu size="32" alt="Menu Icon" className=" text-white"/>
+        <Menu onClick={() => setOpenMenu(true)} size="32" alt="Menu Icon" className=" text-white"/>
     </header>
   );
 }

@@ -10,7 +10,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 export default function Home() {
 
   const [progressWidth, setProgressWidth] = useState(1);
-
+  const [openMenu, setOpenMenu] = useState(false);
   function handleNext() {
   setProgressWidth(prev => (prev < 10 ? prev + 1 : prev));
 }
@@ -22,12 +22,12 @@ function handlePrev() {
 
   return (
     <div className="font-[Maven_Pro]" >
+      {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
       <main 
       className="flex flex-col items-center justify-center min-h-screen mx-auto"
       >
-      <Sidebar />
       <section className="w-full md:min-h-[100vh] text-white bg-[url(/gh-background.png)] bg-cover" >
-        <Header />
+        <Header setOpenMenu={setOpenMenu} />
         <h1 
         className="text-[36px] md:text-[72px] font-[Maven_Pro] font-semibold text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
         >Empowering <br />Global Innovation Through <br/><span className="text-[#09a768] " >African Excellence</span>
