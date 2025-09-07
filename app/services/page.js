@@ -20,13 +20,13 @@ export default function AboutPage() {
         <Menu size="32" alt="Menu Icon" className=" text-black"/>
     </header>
     <section className="bg-white w-[90%] text-black mx-auto" >
-        <h1 className="mt-[96px] max-w-[1000px] mb-4 text-7xl md:text-[80px] font-bold"><span className="text-[#02aa69] " >DEXWIN</span> provides elite digital services</h1>
+        <h1 className="mt-12 md:mt-[96px] max-w-[1000px] mb-4 text-5xl md:text-[80px] font-bold"><span className="text-[#02aa69] " >DEXWIN</span> provides elite digital services</h1>
         <p className="text-2xl max-w-[800px] " >
         Tailored solutions for every stage of product development    
         </p>
-        <img src="/dexwin_assets/about-page-image.png" alt="About Us" className="w-full h-[600px] mt-8 rounded-3xl shadow-lg" />
+        <img src="/dexwin_assets/about-page-image.png" alt="About Us" className="w-full h-[600px] mt-8 rounded-3xl shadow-lg object-cover object-center md:object-fit" />
     </section>
-    <section className="flex items-start justify-between bg-white w-[90%] mx-auto text-black py-6 md:py-[100px]" >
+    <section className="flex flex-col md:flex-row items-start justify-between bg-white w-[90%] mx-auto text-black py-6 md:py-[100px]" >
           <div className="flex items-end gap-4 w-fit mb-[64px] " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
               <h2 className="text-3xl md:text-[36px] font-bold " >SERVICES</h2>
@@ -87,15 +87,15 @@ export default function AboutPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
         >
-          <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
+          <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
         </button>
         </div>
-        <img src="/dexwin_assets/footer-x.svg" className="w-[400px] flex-1 bg-[#232323]  " />
+        <img src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
       </section>
       <Footer />
   </div>

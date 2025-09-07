@@ -31,7 +31,7 @@ export default function ContactPage() {
         </button>
     </header>
     <section className="bg-white w-[90%] text-black mx-auto" >
-        <h1 className="mt-[96px] max-w-[1000px] mb-4 text-7xl md:text-[80px] font-bold">Contact <span className="text-[#02aa69] " >DEXWIN</span> to build something unforgettable</h1>
+        <h1 className="mt-12 md:mt-[96px] max-w-[1000px] mb-4 text-5xl md:text-[80px] font-bold">Contact <span className="text-[#02aa69] " >DEXWIN</span> to build something unforgettable</h1>
         <p className="text-2xl max-w-[800px] " >
           We would love to learn more about your project and how we can help. Tell us about yourself with the form below and we will reach out
         </p>
@@ -105,15 +105,15 @@ export default function ContactPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
         >
-          <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
+          <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
         </button>
         </div>
-        <img src="/dexwin_assets/footer-x.svg" className="w-[400px] flex-1 bg-[#232323]  " />
+        <img src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
       </section>
       <Footer />
   </div>
