@@ -1,8 +1,10 @@
+'use client';
+
 import Link from "next/link";
 import Footer from "../../components/footer";
 import { brandsWorkedWithData, notableProjectsData } from "@/utils/site-data";
 import { ChevronUp, Menu, ArrowUpRight } from "lucide-react";
-
+import { motion } from "motion/react";
 
 export default function ProjectsPage() {
   return (
@@ -28,10 +30,14 @@ export default function ProjectsPage() {
         <div className="flex flex-wrap justify-center gap-6 mt-[104px] mb-24 " >
             {
             brandsWorkedWithData.map((brand) => (
-                <span 
+                <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
                 key={brand.brandName} 
                 className="w-full md:w-[225px]  h-[107px] md:h-[109px] bg-contain md:bg-cover bg-center bg-no-repeat rounded-lg"
-                style={{ backgroundImage: `url(${brand.logoUrl})`}} ></span>
+                style={{ backgroundImage: `url(${brand.logoUrl})`}} ></motion.span>
             ))
             }
         </div>

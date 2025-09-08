@@ -197,22 +197,27 @@ const sidebarLinksData = [
 
 const faqsData = [
     {
+        id: 1,
         question: "What industries do you work with?",
         answer: "We work across various industries, including healthcare, fintech, e-commerce, education, logistics, SaaS, and real estate. Our adaptable team can customize solutions for any niche, bringing deep understanding of industry-specific challenges and user needs to every project."
     },
     {
+        id: 2,
         question: "Can you work with our existing in-house team?",
         answer: "Absolutely! We specialize in seamless integration with existing teams. Whether you need to augment your current workforce, provide specialized expertise, or take full project ownership, we adapt our collaboration style to match your team's workflow and communication preferences."
     },
     {
+        id: 3,
         question: "Do you build custom solutions or use templates?",
         answer: "We build fully custom solutions tailored to your specific business needs and brand identity. While we leverage proven design patterns and best practices for efficiency, every project is crafted from scratch to ensure it perfectly aligns with your goals and provides a unique user experience."
     },
     {
+        id: 4,
         question: "How do I get started?",
         answer: "Getting started is simple! Reach out through our contact form or email us directly. We'll schedule a discovery call to understand your project requirements, timeline, and budget. From there, we'll provide a detailed proposal and project roadmap tailored to your specific needs."
     },
     {
+        id: 5,
         question: "Where is your team located?",
         answer: "Our talented team is based in Accra, Ghana, with strategic partnerships across Europe. This allows us to provide cost-effective, high-quality solutions while maintaining excellent communication and collaboration with clients in different time zones and markets."
     },
