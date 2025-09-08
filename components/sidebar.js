@@ -1,11 +1,22 @@
 import { X } from "lucide-react";
 import Link from "next/link";
 import { sidebarLinksData } from "../utils/site-data";
+import { motion } from "motion/react";
 
 
 export default function Sidebar({ setOpenMenu  }) {
   return (
-    <section className="fixed overflow-y-scroll animate-slide-down z-50 top-0 left-0 right-0 bottom-0 flex flex-col gap-8 w-full min-h-full px-6 md:px-20 py-4 md:py-20 lg:py-25 bg-[#232323] text-white" >
+    <motion.section 
+    initial={{ y: "-100%" }}
+    animate={{ y: 0 }} 
+    transition={{
+    duration: 0.4,
+    scale: { 
+        type: "spring", 
+        bounce: 0 },
+    ease}}   
+    className="fixed overflow-y-scroll animate-slide-down z-50 top-0 left-0 right-0 bottom-0 flex flex-col gap-8 w-full min-h-full px-6 md:px-20 py-4 md:py-20 lg:py-25 bg-[#232323] text-white" 
+    >
         <div className="flex items-center justify-between gap-4" >
             <img src="/dexwin_assets/dexwin-logo.svg" className="w-20 md:w-40 h-10"/>
             <button onClick={() => setOpenMenu(false)} className="flex items-center gap-4" >
@@ -48,6 +59,6 @@ export default function Sidebar({ setOpenMenu  }) {
                 <Link href="" className="text-[16px] font-medium hover:underline " >Legal</Link>
             </nav>
         </footer>
-    </section>
+    </motion.section>
   );
 }

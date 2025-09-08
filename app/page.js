@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { motion } from "motion/react";
 
 export default function Home() {
 
@@ -30,21 +31,30 @@ function handlePrev() {
       >
       <section className="w-full md:min-h-[100vh] text-white bg-[url(/gh-background.png)] bg-cover" >
         <Header setOpenMenu={setOpenMenu} />
-        <h1 
+        <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
         className="text-[36px] md:text-[72px] leading-tight font-[Maven_Pro] font-semibold text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
         >Empowering <br />Global Innovation Through <br/><span className="text-[#09a768] " >African Excellence</span>
-        </h1>
-        <p 
+        </motion.h1>
+        <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
         className="text-[20px] w-9/10 md:text-[24px] md:w-5/10 mb-8 md:mb-[72px] text-center mx-auto " >We provide talent to leading firms looking to expand their product teams
-        </p>
-        <button 
+        </motion.p>
+        <motion.button 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }} 
         className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 r mx-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
-        </button> 
+        </motion.button> 
         <div className="flex items-center justify-center max-w-9/10 mx-auto gap-4 mb-12" >
           <span className="h-[1px] w-[64px] bg-white" ></span>
           <p className="text-[16px] font-black text-center" >TRUSTED BY AMAZING BRANDS</p>
@@ -54,20 +64,35 @@ function handlePrev() {
 
       <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 py-6 md:py-[100px]" >
         <span className="flex-1" >
-          <p 
+          <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="text-[30px] md:text-[36px] font-bold mb-8" 
           >Dexwin is an end-to-end digital product development agency 
           with a focus on delivering usable products that solve problems.
-          </p>
+          </motion.h2>
           <span className="flex flex-col md:flex-row " >
-            <span className="inline-block text-[14px] font-medium w-fit md:min-w-fit max-h-fit px-4 py-2 mb-4 border border-black rounded-full   " >Who We Are?</span>
-            <p className="text-gray-700 leading-relaxed text-lg md:ml-[40px]" >We specialize in product design, data analysis, software development, 
+            <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="inline-block text-[14px] font-medium w-fit md:min-w-fit max-h-fit px-4 py-2 mb-4 border border-black rounded-full   " >Who We Are?</motion.span>
+            <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="text-gray-700 leading-relaxed text-lg md:ml-[40px]" >We specialize in product design, data analysis, software development, 
               digital advertising and general services. We provide talent to leading firms looking
               to expand their product teams 
-              </p>
+              </motion.p>
             </span>
           </span>
-          <img src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] max-w-full object-cover object-center rounded-lg" />
+          <motion.img
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4}}
+          src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] max-w-full object-cover object-center rounded-lg" />
         </section>
 
         <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
