@@ -1,6 +1,6 @@
 'use client';
 
-import LocationContext from '@/app/contexts/location-context';
+import LocationContext from '@/contexts/location-context';
 import { useState } from 'react';
 
 export default function LocationProvider({ children }) {

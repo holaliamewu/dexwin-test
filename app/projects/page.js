@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Footer from "../../components/footer";
-import { brandsWorkedWithData, notableProjectsData } from "../../site-data";
+import { brandsWorkedWithData, notableProjectsData } from "@/utils/site-data";
 import { ChevronUp, Menu, ArrowUpRight } from "lucide-react";
 
 
