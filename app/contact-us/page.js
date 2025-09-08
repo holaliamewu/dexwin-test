@@ -2,11 +2,11 @@
 'use client'
 
 import Link from "next/link";
-import Footer from "../components/footer";
-import { brandsWorkedWithData, faqsData } from "../site-data";
+import Footer from "../../components/footer";
+import { brandsWorkedWithData, faqsData } from "../../utils/site-data";
 import { ChevronUp, Menu } from "lucide-react";
 import { useState } from "react";
-import Sidebar from "../components/sidebar";
+import Sidebar from "../../components/sidebar";
 
 
 export default function ContactPage() {
