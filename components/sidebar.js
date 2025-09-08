@@ -15,8 +15,8 @@ export default function Sidebar({ setOpenMenu  }) {
         duration: 0.4,
         scale: { 
             type: "spring", 
-            bounce: 0 },
-        ease}}   
+            bounce: 0 }
+        }}   
         className="fixed overflow-y-scroll animate-slide-down z-50 top-0 left-0 right-0 bottom-0 flex flex-col gap-8 w-full min-h-full px-6 md:px-20 py-4 md:py-20 lg:py-25 bg-[#232323] text-white" 
         >
             <div className="flex items-center justify-between gap-4" >
