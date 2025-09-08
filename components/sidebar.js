@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import Link from "next/link";
-import { sidebarLinksData } from "../site-data";
+import { sidebarLinksData } from "../utils/site-data";
 
 
 export default function Sidebar({ setOpenMenu  }) {
@@ -21,7 +21,7 @@ export default function Sidebar({ setOpenMenu  }) {
                     ))
                 }
             </nav>
-            <section className="w-full flex flex-col  gap-[65px] " >
+            <section className="w-fit flex flex-col  gap-[65px] " >
                 <div className="flex flex-col items-start md:items-end " >
                     <h3 className="text-[24px] font-bold text-left md:text-right mb-4" >Contact Details</h3>
                     <span className="text-[#00fe9c] mb-2 " >[+233] 55 089 4945</span> 
@@ -32,9 +32,8 @@ export default function Sidebar({ setOpenMenu  }) {
                     <span className="text-[#c8c8c8] " >9 Suhum Street, Accra, Ghana</span> 
                 </div>
                 <button 
-                    className="flex items-center justify-between text-[18px] w-fit font-bold text-center mb-8 md:mb-30 md:mx-auto bg-[#09a768] rounded-full " 
-                >
-                    <h3 className="px-[23px] py-[13px] text-white" >Request a Quote</h3>
+                className="flex items-center items-end justify-center md:ml-auto px-[23px] py-[13px] w-fit text-[18px] w-fit font-bold text-center mb-8 md:mb-30 bg-[#09a768] rounded-full " 
+                >Request a Quote
                 </button> 
             </section>
         </div>

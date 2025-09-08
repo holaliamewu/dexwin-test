@@ -27,7 +27,7 @@ export default function AboutPage() {
         <img src="/dexwin_assets/about-page-image.png" alt="About Us" className="w-full h-[600px] mt-8 rounded-3xl shadow-lg object-cover object-center md:object-fit" />
     </section>
     <section className="flex flex-col md:flex-row items-start justify-between bg-white w-[90%] mx-auto text-black py-6 md:py-[100px]" >
-          <div className="flex items-end gap-4 w-fit mb-[64px] " >
+          <div className="flex items-end gap-4 w-fit mt-32 md:mt-[200px] mb-[64px] " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
               <h2 className="text-3xl md:text-[36px] font-bold " >SERVICES</h2>
             </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </span>
         </section>
 
-        <section className="flex flex-col w-full  text-white bg-[#001f37] py-[80px] " >
+        <section className="flex flex-col w-full  text-white bg-[#001f37] py-4 md:py-[80px] " >
           <span className="px-6 py-4 " >
             <h2 className="text-5xl font-bold text-center mx-auto mb-20" >We&apos;ve worked with <br />amazing brands</h2>  
             <div className="flex flex-wrap justify-center gap-6 " >
@@ -81,13 +81,13 @@ export default function AboutPage() {
             </div>
           </span>
         </section>
-        <section className="flex flex-col md:flex-row items-start min-h-[500px] p-16 md:py-20 bg-[#232323] " >
+      <section className="flex flex-col md:flex-row items-start min-h-[500px] p-16 md:py-20 bg-[#232323] " >
         <div className="flex flex-col " >
           <h2 className="text-4xl md:text-[80px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mx-auto md:mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >

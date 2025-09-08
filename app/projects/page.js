@@ -20,9 +20,11 @@ export default function ProjectsPage() {
         <Menu size="32" alt="Menu Icon" className=" text-black"/>
     </header>
     <section className="bg-white w-[90%] text-black mx-auto" >
-        <h1 className="mt-12 md:mt-[96px] max-w-[1000px] mb-4 text-[60px] md:text-[80px] font-bold">Selected projects impacted by <span className="text-[#02aa69] " >DEXWIN</span></h1>
+        <h1 
+        className="mt-12 md:mt-[96px] max-w-[1000px] mb-4 text-[60px] md:text-[80px] font-bold leading-15 md:leading-normal"
+        >Selected projects impacted by <span className="text-[#02aa69] " >DEXWIN</span></h1>
         <p className="text-2xl max-w-[800px] " >
-        We assist product teams in overcoming intricate product challenges        </p>
+        We assist product teams in overcoming intricate product challenges</p>
         <div className="flex flex-wrap justify-center gap-6 mt-[104px] mb-24 " >
             {
             brandsWorkedWithData.map((brand) => (
@@ -53,13 +55,13 @@ export default function ProjectsPage() {
                         <h6 className="font-regular  " >{project.metricTwoDescription}</h6>
                       </span>  
                     </div>
-                    <div className="flex justify-between gap-12 mt-[50px] " >
+                    <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-12 mt-[50px] " >
                       <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Problem</h4>
                       <p className="text-[18px] text-gray-700 leading-relaxed" >
                         {project.problem}
                       </p>
                     </div>
-                    <div className="flex justify-between gap-12 mt-[50px] " >
+                    <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-12 mt-[50px] " >
                       <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Solution</h4>
                       <p className="text-[18px] text-gray-700 leading-relaxed" >
                         {project.solution}
@@ -76,7 +78,7 @@ export default function ProjectsPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mx-auto md:mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >

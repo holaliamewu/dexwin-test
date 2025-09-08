@@ -1,16 +1,18 @@
 'use client';
 
 import { useState } from "react";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Sidebar from "./components/sidebar";
-import { brandsWorkedWithData, notableProjectsData, partnershipsData, whatWeDoData } from "./site-data";
+import { brandsWorkedWithData, notableProjectsData, partnershipsData, whatWeDoData } from "@/utils/site-data";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import Sidebar from "@/components/sidebar";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
 
   const [progressWidth, setProgressWidth] = useState(1);
   const [openMenu, setOpenMenu] = useState(false);
+  
+
   function handleNext() {
   setProgressWidth(prev => (prev < 10 ? prev + 1 : prev));
 }
@@ -29,7 +31,7 @@ function handlePrev() {
       <section className="w-full md:min-h-[100vh] text-white bg-[url(/gh-background.png)] bg-cover" >
         <Header setOpenMenu={setOpenMenu} />
         <h1 
-        className="text-[36px] md:text-[72px] font-[Maven_Pro] font-semibold text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
+        className="text-[36px] md:text-[72px] leading-tight font-[Maven_Pro] font-semibold text-center mt-12 md:mt-[50px] mb-6 md:mb-[25px] " 
         >Empowering <br />Global Innovation Through <br/><span className="text-[#09a768] " >African Excellence</span>
         </h1>
         <p 
@@ -51,7 +53,7 @@ function handlePrev() {
       </section>
 
       <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 py-6 md:py-[100px]" >
-        <span>
+        <span className="flex-1" >
           <p 
           className="text-[30px] md:text-[36px] font-bold mb-8" 
           >Dexwin is an end-to-end digital product development agency 
@@ -65,12 +67,12 @@ function handlePrev() {
               </p>
             </span>
           </span>
-          <img src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] lg:max-w-md max-w-full" />
+          <img src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] max-w-full object-cover object-center rounded-lg" />
         </section>
 
         <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
           <div className="flex flex-col md:flex-row items-end justify-between mb-[64px] " >
-            <div className="flex items-end gap-4 mb-8 w-full " >
+            <div className="flex items-end gap-4 mb-8 md:mb-0 w-full " >
               <img src="/dexwin_assets/title-icon.svg" alt="How We Do It" className="w-[28px]" />
               <h2 className="text-3xl md:text-[36px] font-bold " >HOW WE DO IT</h2>
             </div>
@@ -129,7 +131,7 @@ function handlePrev() {
               </div>
             </span>
 
-            <span className="hidden md:flex-1" >
+            <span className="hidden md:flex md:flex-1" >
                 <img src="/dexwin_assets/about-us.png" alt="Product Design Icon" className="flex-1 min-w-[500px] w-full h-[1000px] object-cover object-left rounded-lg mb-[30px]" />
             </span>
 

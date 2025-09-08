@@ -1,5 +1,6 @@
 import { Inter, Maven_Pro } from "next/font/google";
 import "./globals.css";
+import LocationProvider from "@/utils/location-provider";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,12 +21,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" className={maven.className}>
-      <body
-        className={` ${inter.variable} antialiased`}
-      >
-        {children}
+      <body className={` ${inter.variable} antialiased`} >
+        <LocationProvider >
+          {children}    
+        </LocationProvider>
       </body>
     </html>
   );

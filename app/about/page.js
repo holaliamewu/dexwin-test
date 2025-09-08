@@ -28,7 +28,7 @@ export default function AboutPage() {
         </p>
         <img src="/dexwin_assets/about-page-image.png" alt="About Us" className="w-full h-[600px] mt-8 object-cover bg-center md:object-fit rounded-3xl shadow-lg" />
     </section>
-    <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-20 py-6 md:py-[100px]" >
+    <section className="flex flex-col md:flex-row-reverse justify-center gap-16 bg-white text-black px-[5%] py-4 md:py-20 lg:py-[100px]" >
         <span>
           <p 
           className="text-[30px] md:text-[36px] font-bold mb-8" 
@@ -46,7 +46,7 @@ export default function AboutPage() {
           <img src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] lg:max-w-md max-w-full" />
         </section>
 
-        <section className="flex flex-col w-full  text-white bg-[#001f37] py-[80px] " >
+        <section className="flex flex-col w-full  text-white bg-[#001f37] py-4 md:py-[80px] " >
           <span className="px-6 py-4 " >
             <h2 className="text-5xl font-bold text-center mx-auto mb-20" >We&apos;ve worked with <br />amazing brands</h2>  
             <div className="flex flex-wrap justify-center gap-6 " >
@@ -67,7 +67,7 @@ export default function AboutPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mx-auto md:mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >

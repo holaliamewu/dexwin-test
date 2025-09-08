@@ -199,4 +199,16 @@ const faqsData = [
     },
 ]
 
-export { faqsData, whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };
+
+const locationsData = [
+    {
+        country: "Ghana",
+        img: "/dexwin_assets/ghana.svg",
+    },
+    {
+        country: "Europe",
+        img: "/dexwin_assets/eu.svg",   
+    }
+]
+
+export { locationsData, faqsData, whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };
