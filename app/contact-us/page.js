@@ -1,11 +1,10 @@
-
 'use client'
 
+import { useState } from "react";
 import Link from "next/link";
 import Footer from "../../components/footer";
 import { brandsWorkedWithData, faqsData } from "../../utils/site-data";
 import { ChevronUp, Menu } from "lucide-react";
-import { useState } from "react";
 import Sidebar from "../../components/sidebar";
 
 

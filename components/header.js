@@ -4,7 +4,7 @@ import { useState, useContext, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu } from "lucide-react";
 import LocationPicker from "./location-picker";
-import LocationContext from "@/app/contexts/location-context";
+import LocationContext from "@/contexts/location-context";
 
 export default function Header({ setOpenMenu }) {
   const { location, setLocation } = useContext(LocationContext);
