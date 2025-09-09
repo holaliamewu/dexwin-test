@@ -85,16 +85,25 @@ export default function AboutPage() {
           src="/dexwin_assets/about-us.png" alt="people in a meeting" className="h-[500px] w-[465px] lg:max-w-md max-w-full" />
         </section>
 
-        <section className="flex flex-col w-full  text-white bg-[#001f37] py-4 md:py-[80px] " >
+        <section className="flex flex-col w-full  text-white bg-[#001f37] py-[80px] " >
           <span className="px-6 py-4 " >
-            <h2 className="text-5xl font-bold text-center mx-auto mb-20" >We&apos;ve worked with <br />amazing brands</h2>  
+            <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold text-center mx-auto mb-20" >We&apos;ve worked with <br />amazing brands</motion.h2>  
             <div className="flex flex-wrap justify-center gap-6 " >
               {
                 brandsWorkedWithData.map((brand) => (
-                  <span 
+                  <motion.span 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: brand.id * 0.15 }}
+                    viewport={{ once: true }}
                     key={brand.brandName} 
                     className="w-full md:w-[225px]  h-[107px] md:h-[109px] bg-contain md:bg-cover bg-center bg-no-repeat rounded-lg"
-                    style={{ backgroundImage: `url(${brand.logoUrl})`}} ></span>
+                    style={{ backgroundImage: `url(${brand.logoUrl})`}} ></motion.span>
                 ))
               }
             </div>
@@ -106,15 +115,20 @@ export default function AboutPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="group flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30  mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
-          <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
+          <span className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform" >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
         </button>
         </div>
-        <img src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
+          <motion.img 
+            initial={{ rotate: 0 }}
+            whileInView={{ rotate: 180 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}        
+            src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
       </section>
       <Footer />
   </div>

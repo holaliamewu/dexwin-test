@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { brandsWorkedWithData, notableProjectsData, partnershipsData, whatWeDoData } from "@/utils/site-data";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Sidebar from "@/components/sidebar";
@@ -10,17 +10,27 @@ import { AnimatePresence, motion } from "motion/react";
 
 export default function Home() {
 
-  const [progressWidth, setProgressWidth] = useState(1);
   const [openMenu, setOpenMenu] = useState(false);
   
+  const scrollRef = useRef(null);
+  const [scrollIndex, setScrollIndex] = useState(0);
+  const progressWidth = (scrollIndex / (notableProjectsData.length - 1)) * 100;
+  const scrollAmount = 800;
+
 
   function handleNext() {
-  setProgressWidth(prev => (prev < 10 ? prev + 1 : prev));
-}
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      setScrollIndex(prev => prev + 1);
+    }
+  };
 
-function handlePrev() {
-  setProgressWidth(prev => (prev > 2 ? prev - 1 : prev));
-}
+  function handlePrev() {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      setScrollIndex(prev => Math.max(prev - 1, 0));
+    }
+  };
 
 
   return (
@@ -279,7 +289,9 @@ function handlePrev() {
             viewport={{ once: true }}           
             className="text-3xl md:text-[36px] font-bold " >NOTABLE PROJECTS</motion.h2>
             </div>
-          <div className="flex flex-col md:flex-row min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
+          <div 
+          ref={scrollRef} 
+          className="flex flex-col md:flex-row min-w-full overflow-x-scroll hide-scrollbar scroll-smooth gap-8 " >
             {
               notableProjectsData.map((project) => (
                 <motion.div 
@@ -313,7 +325,7 @@ function handlePrev() {
                 <button onClick={handlePrev} className="flex items-center justify-center border border-gray-300 rounded-full w-[78px] h-[78px] hover:bg-gray-100 transition " ><ArrowLeft size="24" /></button>  
                 <button onClick={handleNext} className="flex items-center justify-center border border-gray-300 rounded-full w-[78px] h-[78px] hover:bg-gray-100 transition " ><ArrowRight size="24" /></button>  
               </span>
-              <div className="flex flex-1 w-[100vw] bg-gray-100 h-1 rounded-full" ><div className="bg-[#002f54] h-1 rounded-full"  style={{width: progressWidth * 10}}></div></div>
+              <div className="flex flex-1 w-[100vw] bg-gray-100 h-1 rounded-full" ><div className="bg-[#002f54] h-1 rounded-full transition-all duration-500 ease-out"  style={{width: `${progressWidth}%`}}></div></div>
             </div>
           </section>
         <section className="bg-white w-[90%] text-black py-6 md:py-[100px]" >
@@ -355,10 +367,10 @@ function handlePrev() {
             Unlock your digital potential with our tailored solutions
           </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="group flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30  mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
-          <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
+          <span className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform" >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
         </button>

@@ -20,14 +20,14 @@ export default function Footer() {
               <span className="flex flex-col gap-4" >
                 {
                   footerLinksOneData.map((link) => (
-                    <Link href={link.linkUrl} className="" >{link.linkName}</Link>
+                    <Link key={link.linkName} href={link.linkUrl} className="" >{link.linkName}</Link>
                   ))
                 }
               </span>
               <span className="flex flex-col gap-4" >
                 {
                   footerLinksTwoData.map((link) => (
-                    <Link href={link.linkUrl} className="" >{link.linkName}</Link>
+                    <Link key={link.linkName} href={link.linkUrl} className="" >{link.linkName}</Link>
                   ))
                 }
               </span>

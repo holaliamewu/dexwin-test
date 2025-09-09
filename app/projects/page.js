@@ -8,6 +8,7 @@ import { ChevronUp, Menu, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Header from "@/components/header-dark";
 import Sidebar from '@/components/sidebar';
+import { delay } from 'motion';
 
 export default function ProjectsPage() {
 
@@ -81,15 +82,20 @@ export default function ProjectsPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
+        className="group flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30  mr-auto bg-[#09a768] rounded-full " 
         >
           <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
-          <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
+          <span className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform" >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
         </button>
         </div>
-        <img src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
+          <motion.img 
+            initial={{ rotate: 0 }}
+            whileInView={{ rotate: 180 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}        
+            src="/dexwin_assets/footer-x.svg" className="hidden md:block w-[400px] flex-1 bg-[#232323]  " />
       </section>
       <Footer />
   </div>
