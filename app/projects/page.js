@@ -84,9 +84,9 @@ export default function ProjectsPage() {
             High quality & cost effective delivery with impact
             </h2>
         <button 
-        className="flex items-center justify-between text-[18px] text-center mb-8 md:mb-30 mx-auto md:mr-auto bg-[#09a768] rounded-full " 
+        className="flex items-center justify-between text-[18px] text-cente mb-8 md:mb-30 mr-auto bg-[#09a768] rounded-full " 
         >
-          <h3 className="px-6 md:py-4 text-white" >Request a Quote</h3>
+          <h3 className="px-8 py-4 text-white" >Request a Quote</h3>
           <span className="bg-white w-16 h-16 rounded-full flex items-center justify-center " >
             <img src="/dexwin_assets/request-quote-arrow.svg" className="w-4" />
           </span>
