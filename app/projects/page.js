@@ -60,13 +60,13 @@ export default function ProjectsPage() {
                       </span>  
                     </div>
                     <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-12 mt-[50px] " >
-                      <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Problem</h4>
+                      <h4 className="w-fit md:w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Problem</h4>
                       <p className="text-[18px] text-gray-700 leading-relaxed" >
                         {project.problem}
                       </p>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-12 mt-[50px] " >
-                      <h4 className="w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Solution</h4>
+                      <h4 className="w-fit md:w-[130px] h-fit text-[14px] font-medium border border-gray-800 rounded-full px-4 py-2" >Solution</h4>
                       <p className="text-[18px] text-gray-700 leading-relaxed" >
                         {project.solution}
                       </p>
