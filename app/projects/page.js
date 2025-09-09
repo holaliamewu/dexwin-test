@@ -1,26 +1,23 @@
 'use client';
 
+import { useState } from 'react';
 import Link from "next/link";
 import Footer from "../../components/footer";
 import { brandsWorkedWithData, notableProjectsData } from "@/utils/site-data";
 import { ChevronUp, Menu, ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import Header from "@/components/header-dark";
+import Sidebar from '@/components/sidebar';
 
 export default function ProjectsPage() {
+
+  const [ openMenu, setOpenMenu ] = useState(false);
   return (
   <div>
-    <header 
-    className=" flex items-center justify-between w-full px-4 md:px-[5%] pt-4 md:pt-20 lg:pt-[50px] mx-auto pb-8">
-        <Link href="/" className="flex gap-4 pt-2" >
-          <img src="/dexwin_assets/dexwin-logo-black.svg" className="w-25"/>
-          <span className="flex items-center gap-4" >
-            <span className="w-0.5 h-full bg-black" ></span>
-            <img src="/dexwin_assets/ghana.svg" className="w-8 " /> 
-            <ChevronUp size="18" />
-          </span>
-        </Link>
-        <Menu size="32" alt="Menu Icon" className=" text-black"/>
-    </header>
+    <AnimatePresence >
+        {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
+      </AnimatePresence>    
+      <Header setOpenMenu={setOpenMenu} />
     <section className="bg-white w-[90%] text-black mx-auto" >
         <h1 
         className="mt-12 md:mt-[96px] max-w-[1000px] mb-4 text-[60px] md:text-[80px] font-bold leading-15 md:leading-normal"
@@ -78,7 +75,7 @@ export default function ProjectsPage() {
                   </div>
               ))}
         </section>
-        <section className="flex flex-col md:flex-row items-start min-h-[500px] p-16 md:py-20 bg-[#232323] " >
+      <section className="flex flex-col md:flex-row items-start min-h-[500px] p-16 md:py-20 bg-[#232323] " >
         <div className="flex flex-col " >
           <h2 className="text-4xl md:text-[80px] mb-[56px] leading-normal font-bold text-white text-center md:text-left" >
             High quality & cost effective delivery with impact

@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "motion/react";
 
 export default function Sidebar({ setOpenMenu  }) {
   return (
-    <AnimatePresence >
         <motion.section 
         initial={{ y: "-100%" }}
         animate={{ y: 0 }} 
@@ -62,6 +61,5 @@ export default function Sidebar({ setOpenMenu  }) {
                 </nav>
             </footer>
         </motion.section>
-    </AnimatePresence>
   );
 }

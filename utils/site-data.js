@@ -235,4 +235,41 @@ const locationsData = [
     }
 ]
 
-export { locationsData, faqsData, whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };
+
+const footerLinksOneData = [
+    {
+        linkName: "About",
+        linkUrl: "/about"
+    },
+    {
+        linkName: "Services",
+        linkUrl: "/services"
+    },
+    {
+        linkName: "Contact Us",
+        linkUrl: "/contact-us"
+    },
+    {
+        linkName: "Projects",
+        linkUrl: "/projects"
+    },
+]
+
+
+const footerLinksTwoData = [
+    {
+        linkName: "Terms & Conditions",
+        linkUrl: "/terms-and-conditions"
+    },
+    {
+        linkName: "Privacy Policy",
+        linkUrl: "/privacy-policy"
+    },
+    {
+        linkName: "Legal",
+        linkUrl: "/legal"
+    },
+]
+
+
+export { footerLinksOneData, footerLinksTwoData, locationsData, faqsData, whatWeDoData, brandsWorkedWithData, coreServicesData, notableProjectsData, partnershipsData, sidebarLinksData };

@@ -1,3 +1,4 @@
+import { footerLinksOneData, footerLinksTwoData } from "@/utils/site-data";
 import Link from "next/link";
 
 
@@ -17,15 +18,18 @@ export default function Footer() {
           </span>
           <nav className="flex flex-col md:flex-row gap-8 md:gap-64" >
               <span className="flex flex-col gap-4" >
-                  <Link href="/" className="" >About</Link>
-                  <Link href="/" className="" >Services</Link>
-                  <Link href="/" className="" >Contact Us</Link>
-                  <Link href="/" className="" >Projects</Link>
+                {
+                  footerLinksOneData.map((link) => (
+                    <Link href={link.linkUrl} className="" >{link.linkName}</Link>
+                  ))
+                }
               </span>
               <span className="flex flex-col gap-4" >
-                  <Link href="/" className="flex" >Terms & Conditions</Link>
-                  <Link href="/" className="" >Privacy Policy</Link>
-                  <Link href="/" className="" >Legal</Link>
+                {
+                  footerLinksTwoData.map((link) => (
+                    <Link href={link.linkUrl} className="" >{link.linkName}</Link>
+                  ))
+                }
               </span>
           </nav>
         </section>

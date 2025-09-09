@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function Home() {
 
@@ -25,7 +25,9 @@ function handlePrev() {
 
   return (
     <div className="font-[Maven_Pro]" >
-      {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
+      <AnimatePresence >
+        {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
+      </AnimatePresence>
       <main 
       className="flex flex-col items-center justify-center min-h-screen mx-auto"
       >

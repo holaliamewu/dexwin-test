@@ -6,7 +6,7 @@ import Footer from "../../components/footer";
 import { brandsWorkedWithData, faqsData } from "../../utils/site-data";
 import { ChevronUp, Menu } from "lucide-react";
 import Sidebar from "../../components/sidebar";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 
 export default function ContactPage() {
@@ -15,7 +15,9 @@ export default function ContactPage() {
 
   return (
   <div>
-    {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
+    <AnimatePresence >
+      {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
+      </AnimatePresence>
     <header 
     className=" flex items-center justify-between w-full px-4 md:px-[5%] pt-4 md:pt-20 lg:pt-[50px] mx-auto pb-8">
         <Link href="/" className="flex gap-4 pt-2" >
